@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Chat!</title>
+    <script src="/node_modules/socket.io/client-dist/socket.io.js"></script>
+    <script src="/js/script.js" defer></script>
+    <link href="/css/global.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="chat">
+      <div id="chat-window" class="chat-window"></div>
+      <div class="chat-control">
+        <input id="chat-input" class="chat-input" type="text" placeholder="Escribe tu mensaje">
+        <button onclick="emitirEvento()" class="chat-btn">Enviar</button>
+      </div>
+    </div>
+
+    <dialog id="chat-dialog" class="chat-dialog">
+      <input id="chat-nombre" class="chat-nombre" type="text" placeholder="Coloca tu nombre..."/>
+      <button onclick="guardarNombre()" class="chat-btn">Guardar</button>
+    </dialog>
+  </body>
+</html>
